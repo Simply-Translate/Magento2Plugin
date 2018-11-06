@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Milchbar
+ * @copyright Copyright (c) 2017 Milchbar (https://www.milchbar.nl)
+ * @package Milchbar_SimplyTranslate
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="milchbar" translate="label" sortOrder="999999" class="milchbar-tab">
+            <label>Simply Translate</label>
+        </tab>
+        <section id="milchbar_simplytranslate" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Simply Translate Koppeling</label>
+            <tab>milchbar</tab>
+            <resource>Milchbar_SimplyTranslate::milchbar_simplytranslate</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General</label>
+                <comment><![CDATA[
+                  <p><strong>Hoe werkt het?</strong><p/>
+                  <p>Activeer de integratie, maak een nieuw vertaalproject aan en selecteer de gewenste tekst. Zodra de vertalers uw teksten vertaald hebben, kunt u deze controleren. Na uw akkoord laden wij de vertalingen met één muisklik in uw webshop. Start direct met verkopen in het buitenland!<p/>
+                  <p>Stappenplan<br/>
+                  1. Activeer de Simply Translate Platform integratie [System -> Extensions -> Integrations -> Simply Translate Platform -> Activate]<br/>
+                  2. Een pagina bij Simply Translate opent zich, maak hier een nieuw account aan<br/>
+                  3. U bent klaar om uw webshop te laten vertalen<br/>
+                  <p/>
+                  <p>Ga naar het <a href="https://platform.simplytranslate.nl/" target="_blank">Simply Translate Platform</a><p/>
+                ]]></comment>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <!-- <comment>
+                        Comment for `Enable Simply Translate` setting.
+                    </comment> -->
+                </field>
+                <field id="license" translate="label comment" type="text" sortOrder="15" showInDefault="1"   showInWebsite="1" showInStore="1">
+                    <label>License</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

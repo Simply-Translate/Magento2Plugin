@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @author Milchbar
+ * @copyright Copyright (c) 2017 Milchbar (https://www.milchbar.nl)
+ * @package Milchbar_SimplyTranslate
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/milchbar/simplytranslate/getEnabled/" method="POST">
+        <service class="Milchbar\SimplyTranslate\Api\SimplyTranslateRepositoryInterface" method="getEnabled"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+    <route url="/V1/milchbar/simplytranslate/getLicense/" method="POST">
+        <service class="Milchbar\SimplyTranslate\Api\SimplyTranslateRepositoryInterface" method="getLicense"/>
+        <resources>
+            <resource ref="Magento_Backend::admin"/>
+        </resources>
+    </route>
+</routes>
